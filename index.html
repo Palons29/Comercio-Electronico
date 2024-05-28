@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleccionar Producto</title>
+</head>
+<body>
+    <h1>Seleccione un Producto</h1>
+    <form id="product-form">
+        <div>
+            <input type="radio" id="product1" name="product" value="Descripción del Producto 1" data-price="10.00">
+            <label for="product1">Producto 1 - $10.00</label>
+        </div>
+        <div>
+            <input type="radio" id="product2" name="product" value="Descripción del Producto 2" data-price="20.00">
+            <label for="product2">Producto 2 - $20.00</label>
+        </div>
+        <div>
+            <input type="radio" id="product3" name="product" value="Descripción del Producto 3" data-price="30.00">
+            <label for="product3">Producto 3 - $30.00</label>
+        </div>
+        <button type="button" onclick="goToConfirmationPage()">Comprar</button>
+    </form>
+
+    <script>
+        function goToConfirmationPage() {
+            const selectedProduct = document.querySelector('input[name="product"]:checked');
+            if (!selectedProduct) {
+                alert('Seleccione un producto');
+                return;
+            }
+
+            const description = selectedProduct.value;
+            const price = selectedProduct.getAttribute('data-price');
+
+            // Redirigir a la página de confirmación con los datos del producto como parámetros en la URL
+            window.location.href = `confirmation.html?description=${encodeURIComponent(description)}&price=${encodeURIComponent(price)}`;
+        }
+    </script>
+</body>
+</html>
