@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmación de Compra</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Confirmación de Compra</h1>
-    <p>Descripción del Producto: <span id="product-description"></span></p>
-    <p>Precio: $<span id="product-price"></span></p>
-    <div id="paypal-button-container"></div>
+    <div class="container">
+        <h1>Confirmación de Compra</h1>
+        <p class="product-description">Descripción del Producto: <span id="product-description"></span></p>
+        <p class="product-price">Precio: $<span id="product-price"></span></p>
+        <div id="paypal-button-container"></div>
+    </div>
 
     <script src="https://www.paypal.com/sdk/js?client-id=AYcSryXgNttU4G57J2WVdkgM_y12kYeOmlny8Zetf6NuYdu0HXjKZBfzFotgqNrfUj0GvxQt4ynJsyqE"></script>
     <script>

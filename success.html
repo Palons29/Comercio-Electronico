@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pago Completado</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Pago Completado</h1>
-    <p>Gracias por su compra. Su pedido ha sido completado con éxito.</p>
-    <p>Identificador de Pedido: <span id="order-id"></span></p>
+    <div class="container">
+        <h1 class="success-message">Pago Completado</h1>
+        <p>Gracias por su compra. Su pedido ha sido completado con éxito.</p>
+        <p>Identificador de Pedido: <span id="order-id"></span></p>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
